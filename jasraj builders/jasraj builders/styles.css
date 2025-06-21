@@ -1,0 +1,1060 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 0;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-content h1 span {
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem 1rem;
+    animation: swing 3s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+/* Add different animation delays for each word */
+.hero-content h1 span:nth-child(1) { animation-delay: 0.1s; }
+.hero-content h1 span:nth-child(2) { animation-delay: 0.2s; }
+.hero-content h1 span:nth-child(3) { animation-delay: 0.3s; }
+.hero-content h1 span:nth-child(4) { animation-delay: 0.4s; }
+
+/* Remove the rope effect styles */
+.hero-content h1 span::before {
+    display: none;
+}
+
+/* Update dark mode styles */
+body.dark-mode .hero-content h1 span::before {
+    display: none;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ceo-title {
+    font-size: 15rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    animation: swing 4s ease-in-out infinite;
+    transform-origin: top center;
+    display: inline-block;
+}
+
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+/* Update dark mode styles */
+body.dark-mode .ceo-title {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* About Section */
+.about {
+    padding: 5rem 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.about p {
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.about-card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-card h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-card p {
+    font-size: 1rem;
+    margin-bottom: 0;
+    text-align: left;
+    color: #ffffff;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: #000000;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.service-card p {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.contact-item {
+    padding: 1.5rem;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.contact-item i.fa-tiktok {
+    color: #000000;
+}
+
+.contact-item i.fa-whatsapp {
+    color: #25D366;
+}
+
+.contact-item i.fa-instagram {
+    color: #E1306C;
+}
+
+.contact-item i.fa-phone {
+    color: #000000;
+}
+
+.contact-item p {
+    color: #ffffff;
+}
+
+.contact-item .contact-detail {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+/* Only apply to Instagram handle */
+.contact-item i.fa-instagram + p + .contact-detail {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.contact-item i.fa-phone + p + .contact-detail,
+.contact-item i.fa-whatsapp + p + .contact-detail,
+.contact-item i.fa-instagram + p + .contact-detail {
+    color: #000000;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+.contact-detail {
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(255, 255, 255, 0.1);
+}
+
+.contact-form h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #333333;
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #666666;
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 5rem 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: #000000;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: #ffd700 !important;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: 500;
+}
+
+.client-info {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.client-info h4 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.client-info p {
+    color: #2c3e50;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Reviews Section */
+.reviews {
+    padding: 5rem 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.reviews h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffff;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.review-card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.review-date {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.review-text {
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.reviewer-info {
+    border-top: 1px solid #333333;
+    padding-top: 1rem;
+}
+
+.reviewer-info h4 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.reviewer-info p {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #000000;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .ceo-title {
+        font-size: 8rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .about, .services, .contact, .reviews {
+        padding: 3rem 1rem;
+    }
+
+    .about-grid, .services-grid, .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0;
+    }
+    
+    .about-card, .service-card, .review-card {
+        margin-bottom: 1rem;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .contact-form {
+        margin-top: 1rem;
+        padding: 1.5rem;
+    }
+
+    .logo-img {
+        height: 30px;
+    }
+    
+    .logo span {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.7rem;
+    }
+
+    .submit-btn {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+}
+
+/* Additional mobile optimizations for smaller screens */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .ceo-title {
+        font-size: 6rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .about h2, .services h2, .contact h2, .reviews h2 {
+        font-size: 2rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+    }
+
+    .contact-item i {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle i {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle .fa-sun {
+    display: none;
+}
+
+.theme-toggle .fa-moon {
+    display: block;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #000000;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .about,
+body.dark-mode .services,
+body.dark-mode .contact,
+body.dark-mode .reviews {
+    background-color: #000000;
+}
+
+body.dark-mode .about-card,
+body.dark-mode .service-card,
+body.dark-mode .review-card,
+body.dark-mode .contact-form,
+body.dark-mode .contact-item {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    box-shadow: 0 3px 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .about h2,
+body.dark-mode .services h2,
+body.dark-mode .contact h2,
+body.dark-mode .reviews h2,
+body.dark-mode .about-card h3,
+body.dark-mode .service-card h3,
+body.dark-mode .contact-form h3,
+body.dark-mode .client-info h4,
+body.dark-mode .reviewer-info h4 {
+    color: #ffffff;
+}
+
+body.dark-mode .about p,
+.service-card p,
+.review-text,
+.contact-detail,
+.about-card p,
+.client-info p,
+.reviewer-info p,
+.contact-item p {
+    color: #ffffff;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group select,
+body.dark-mode .form-group textarea {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333333;
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder {
+    color: #666666;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group select:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+body.dark-mode .submit-btn {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+body.dark-mode .submit-btn:hover {
+    background-color: #2980b9;
+}
+
+body.dark-mode .review-date,
+body.dark-mode .contact-detail {
+    color: #ffffff;
+}
+
+body.dark-mode footer {
+    background-color: #000000;
+    color: #ffffff;
+    border-top: 1px solid #333333;
+}
+
+body.dark-mode .theme-toggle {
+    background: #ffffff;
+}
+
+body.dark-mode .theme-toggle i {
+    color: #000000;
+}
+
+body.dark-mode .nav-links {
+    background-color: #000000;
+}
+
+body.dark-mode .nav-links a {
+    color: #ffffff;
+}
+
+body.dark-mode .nav-links a:hover {
+    color: #3498db;
+}
+
+/* Light Mode Text Colors */
+.about h2,
+.services h2,
+.contact h2,
+.reviews h2,
+.about-card h3,
+.service-card h3,
+.contact-form h3,
+.client-info h4,
+.reviewer-info h4 {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.about p,
+.service-card p,
+.review-text,
+.contact-detail,
+.about-card p,
+.client-info p,
+.reviewer-info p,
+.contact-item p {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Update card backgrounds */
+.about-card,
+.service-card,
+.review-card,
+.contact-form,
+.contact-item {
+    background-color: #ffffff;
+    box-shadow: 0 3px 15px rgba(44, 62, 80, 0.1);
+}
+
+/* Update section backgrounds */
+.about,
+.services,
+.contact,
+.reviews {
+    background-color: #f8f9fa;
+}
+
+/* Form elements */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #95a5a6;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Update other text elements */
+.review-date,
+.contact-detail {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Update headings in hero section */
+.hero-content h1,
+.hero-content h2,
+.ceo-title {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Update navigation */
+.nav-links a {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Update footer */
+footer {
+    background-color: #2c3e50;
+    color: #ffffff;
+}
+
+/* Update dark mode styles for about section */
+body.dark-mode .about {
+    background-color: #000000;
+}
+
+body.dark-mode .about-card {
+    background-color: #1a1a1a;
+    box-shadow: 0 3px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Update dark mode styles */
+body.dark-mode .reviews,
+body.dark-mode .contact {
+    background-color: #000000;
+}
+
+body.dark-mode .review-card,
+body.dark-mode .contact-form,
+body.dark-mode .contact-item {
+    background-color: #1a1a1a;
+    box-shadow: 0 3px 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .reviews .stars {
+    color: #ffd700 !important;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 1rem;
+}
+
+/* Update dark mode styles */
+body.dark-mode .tagline {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .contact,
+body.dark-mode .contact * {
+    color: #ffffff !important;
+}
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form select,
+body.dark-mode .contact-form textarea {
+    color: #ffffff !important;
+    background-color: #1a1a1a;
+}
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+    color: #ffffff !important;
+    opacity: 0.8;
+}
+
+body.dark-mode .services,
+body.dark-mode .services * {
+    color: #ffffff !important;
+}
+body.dark-mode .reviews,
+body.dark-mode .reviews * {
+    color: #ffffff !important;
+}
+
+.contact-item i.fa-whatsapp + p + .contact-detail {
+    color: #000000;
+    font-weight: normal;
+}
+.contact-item i.fa-instagram + p + .contact-detail {
+    color: #000000;
+    font-weight: normal;
+} 
